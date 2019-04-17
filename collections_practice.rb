@@ -30,21 +30,19 @@ end
 def kesha_maker(strings)
   i = 0
   while i < strings.length
-    puts "strings1: #{strings}"
-    puts "strings[i].split(): #{strings[i].split("")}"
     string_arr = strings[i].split("")
-    puts "string_arr1: #{string_arr}"
+
     string_arr[2] = "$"
     puts "string_arr2: #{string_arr}"
     strings[i] = string_arr.join
     puts "strings[i]: #{strings[i]}"
     i += 1
   end
-  puts "strings2: #{strings}"
+  strings
 end
 
 def find_a(strings)
-  strings.find_all { |string| string.start_with("a")}
+  strings.find_all { |string| string.start_with?("a")}
 end
 
 def sum_array(array)
